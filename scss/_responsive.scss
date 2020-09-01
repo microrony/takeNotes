@@ -1,0 +1,38 @@
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  #notes {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #header #navbar {
+    .container {
+      flex-direction: column;
+      height: 200px;
+      justify-content: space-around;
+      padding: 2rem;
+
+      .logo {
+        margin-top: 1rem;
+      }
+
+      .nightMode div {
+        margin: 1rem;
+      }
+
+      form input {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #notes {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
