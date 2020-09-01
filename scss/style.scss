@@ -1,2 +1,103 @@
 @import 'config';
 @import 'main';
+
+#header {
+  #navbar {
+    box-shadow: 0px 5px 50px hsla(0, 0, 0, 0.1);
+    .container {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        font-size: 2.5rem;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+      }
+
+      .nightMode div {
+        width: 50px;
+        height: 50px;
+        background-color: $dark-color;
+        z-index: 2;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          color: $light-color;
+        }
+      }
+
+      form input {
+        padding: 0.8rem 1.2rem;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        background: $light-color url('/icons/search-line.svg') no-repeat 10% 60%/20px;
+      }
+
+      form input:focus {
+        background-image: none;
+      }
+
+      form input::placeholder {
+        color: $secondary-color;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#takeNote {
+  display: flex;
+  justify-content: center;
+  input {
+    box-shadow: 3px 5px 25px hsla(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    width: 300px;
+    border: 0.5px solid rgba($dark-color, 0.1);
+    border-radius: 8px;
+    outline: none;
+    background-color: $light-color;
+    margin: 2rem 0;
+  }
+  input::placeholder {
+    color: $secondary-color;
+  }
+}
+
+#notes {
+  margin-top: 1rem;
+
+  .container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5, 1fr);
+
+    .note {
+      border: 1px solid rgba($dark-color, 0.1);
+
+      .title {
+        padding: 1rem;
+        border-bottom: 1px solid rgba($dark-color, 0.1);
+      }
+      .body {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+    }
+
+    .note:hover {
+      background-color: $light-color;
+      cursor: pointer;
+      box-shadow: 3px 5px 5px hsla(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@import 'utilities';
