@@ -1,7 +1,6 @@
 // Varitables
 let form = document.getElementById('takeNote');
 let notes = document.querySelector('#notes .container');
-let search = document.getElementById('search');
 
 // Functions
 const takeNote = (e) => {
@@ -20,4 +19,3 @@ const takeNote = (e) => {
 
 // Events
 form.addEventListener('submit', takeNote);
-// search.addEventListener('keyup', findNote);
